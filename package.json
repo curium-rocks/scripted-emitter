@@ -62,5 +62,8 @@
   "bugs": {
     "url": "https://github.com/curium-rocks/scripted-emitter/issues"
   },
-  "homepage": "https://github.com/curium-rocks/scripted-emitter#readme"
+  "homepage": "https://github.com/curium-rocks/scripted-emitter#readme",
+  "dependencies": {
+    "@curium.rocks/data-emitter-base": "^0.1.1-alpha.25"
+  }
 }
