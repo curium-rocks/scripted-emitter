@@ -1,5 +1,5 @@
 {
-  "name": "scripted-emitter",
+  "name": "@curium-rocks/scripted-emitter",
   "version": "0.1.0",
   "description": "A emitter that uses a script to emit predefined events on a given timeline",
   "main": "build/src/index.js",
