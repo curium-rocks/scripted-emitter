@@ -1,4 +1,6 @@
 # Scripted Emitter
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_scripted-emitter&metric=alert_status)](https://sonarcloud.io/dashboard?id=curium-rocks_scripted-emitter) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_scripted-emitter&metric=coverage)](https://sonarcloud.io/dashboard?id=curium-rocks_scripted-emitter) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=curium-rocks_scripted-emitter&metric=security_rating)](https://sonarcloud.io/dashboard?id=curium-rocks_scripted-emitter) 
+
 A emitter that emits data from a defined script to mock events.
 
 ## How to install
