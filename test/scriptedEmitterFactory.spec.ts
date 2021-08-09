@@ -78,7 +78,19 @@ function validateEmitter(emitter: IDataEmitter) : void {
     const metaData = scriptedEmitter.getMetaData() as Record<string, unknown>;
     expect(metaData.script).to.be.not.null;
     const newScript = metaData.script as IScript;
-    expect(newScript).to.be.eq(script);
+    expect(newScript.events.length).to.be.eq(script.events.length);
+    const newData = newScript.events.map((data)=>{
+        if(data.dataEvent) {
+            return data.dataEvent.data;
+        }
+    }).filter((item) => item != null);
+
+    const origData = script.events.map((data) => {
+        if(data.dataEvent) {
+            return data.dataEvent.data;
+        }
+    }).filter((item) => item != null);
+    expect(newData).to.be.deep.eq(origData);
 }
 
 describe( 'ScriptedEmitterFactory', function() {
