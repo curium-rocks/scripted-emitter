@@ -5,9 +5,8 @@ import { IScript, ScriptedEmitter } from '../src/scriptedEmitter';
 import { ScriptedEmitterFactory } from '../src/scriptedEmitterFactory';
 import crypto from 'crypto';
 
-const fakeEmitter: any = {
-
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const fakeEmitter: any = {}
 
 ProviderSingleton.getInstance().registerEmitterFactory(ScriptedEmitter.TYPE, new ScriptedEmitterFactory());
 const script : IScript = {

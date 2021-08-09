@@ -63,8 +63,9 @@ export class ScriptedEmitter extends BaseEmitter implements IDisposable {
      * Stop executing the script timeline
      */
     stop(): void {
-        if(this.timeoutHandler) {
+        if(this.timeoutHandler != null) {
             clearTimeout(this.timeoutHandler);
+            this.timeoutHandler = undefined;
         }
     }
 
@@ -75,9 +76,11 @@ export class ScriptedEmitter extends BaseEmitter implements IDisposable {
     protected tick(evt:IScriptedEvent): void {
         if(evt.dataEvent) {
             this.notifyDataListeners(evt.dataEvent);
+            this.lastDataEvent = evt.dataEvent;
         }
         if(evt.statusEvent) {
             this.notifyStatusListeners(evt.statusEvent);
+            this.lastStatusEvent = evt.statusEvent;
         }
     }
 
@@ -174,6 +177,14 @@ export class ScriptedEmitter extends BaseEmitter implements IDisposable {
      */
     getType(): string {
         return ScriptedEmitter.TYPE;
+    }
+
+    /**
+     * 
+     */
+    dispose(): void {
+        super.dispose();
+        this.stop();
     }
 
 }
