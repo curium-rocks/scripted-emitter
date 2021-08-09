@@ -82,7 +82,7 @@ const emitter = await factory.buildEmitter({
 }) as ScriptedEmitter;
 
 emitter.onData((dataEvt) => {
-    console.log(`Data Event: ${dataEvt}`);
+    console.log(`Data Event: ${JSON.stringify(dataEvt)}`);
 });
 
 emitter.start();
