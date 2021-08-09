@@ -154,7 +154,19 @@ export class ScriptedEmitter extends BaseEmitter implements IDisposable {
      * @return {unknown}
      */
     getMetaData(): unknown {
-        return {}
+        return {
+            script: this.script
+        }
+    }
+
+    /**
+     * 
+     * @return {unknown}
+     */
+    getEmitterProperties(): unknown {
+        return {
+            script: this.script
+        }
     }
 
     /**

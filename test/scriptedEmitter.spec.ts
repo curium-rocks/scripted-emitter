@@ -17,21 +17,21 @@ describe( 'ScriptedEmitter', function() {
             expect(false).to.be.true;
         })
     });
-    describe(' probeStatus()', function() {
+    describe('probeStatus()', function() {
         it( 'Should provide the latest event', function() {
             expect(false).to.be.true;
         })
     });
-    describe(' probeCurrentData()', function() {
+    describe('probeCurrentData()', function() {
         it( 'Should provide the latest event', function() {
             expect(false).to.be.true;
         })
     });
-    describe(' sendCommand()', function() {
+    describe('sendCommand()', function() {
         it( 'Should allow starting the script', function() {
             expect(false).to.be.true;
         });
-        it(' Should allow stopping the script', function() {
+        it( 'Should allow stopping the script', function() {
             expect(false).to.be.true;
         });
         it( 'Should allow setting the script', function() {
